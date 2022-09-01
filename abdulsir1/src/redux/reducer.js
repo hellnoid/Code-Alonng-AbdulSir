@@ -1,4 +1,4 @@
-import { ADD_TODO } from "./ActionTypes";
+import { ADD_TODO, INCREMENT } from "./ActionTypes";
 
 const initState = {
   count: 0,
@@ -12,6 +12,13 @@ export const reducer = (state = initState, action) => {
         ...state,
         todos: [...state.todos, action.payload],
       };
+
+    case INCREMENT:
+      return {
+        ...state,
+        count: state.count + action.payload,
+      };
+
     default:
       return state;
   }

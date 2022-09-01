@@ -1,6 +1,11 @@
-import { ADD_TODO } from "./ActionTypes";
+import { ADD_TODO, INCREMENT } from "./ActionTypes";
 
 export const addTodo = (data) => ({
-  title: ADD_TODO,
+  type: ADD_TODO,
+  payload: data,
+});
+
+export const increment = (data) => ({
+  type: INCREMENT,
   payload: data,
 });
